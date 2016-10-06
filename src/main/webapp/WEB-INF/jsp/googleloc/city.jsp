@@ -1,44 +1,52 @@
 <%@include file="../includes/header.jsp"%>
 <%@include file="../includes/navbar.jsp"%>
 
-<script>
 
+<body>
 
-//    if(!empty($_GET['location'])){
-//        $maps_url = 'https://maps.googleapis.com/maps/api/geocode/json?address='.urldecode ($_GET['location']);
-//
-//        $maps_json = file_get_contents($maps_url);
-//        $maps_array = json_decode($maps_json,true)
-//
-//        $lat = $maps_array['results'][0]['geometry']['location']['lat']
-//        $lng = $maps_array['results'][0]['geometry']['location']['lng']
-//
-//        $instagram_url = 'https://api.instagram.com/v1/media/search?lat=' .$lat .'&lng='.$lng . '&client_id=8083bb9a80ca4712a663d0b112f4eda5';
-//
-//        $instagram_json = file_get_contents($instagram_url);
-//        $instagram_array = json_decode($instagram_json, true);
-//    }
+<div id="images">
 
+    <div class="form-group">
 
-    $('#cityButton').onclick
-    $.ajax({
-        dataType: 'json',
-        url: 'https://maps.googleapis.com/maps/api/geocode/json?address='.$("[name='location']").val() ,
-        data: data,
-        success: success
-    });
+        <form>
+            Please enter a location:  <input type="text"  placeholder="Location" name="location" id="locationId" />
+            <input type="submit" id="locationButton"  class="btn btn-primary">  </input>
+            <br><br>
 
+        </form>
 
-</script>
+    </div>
 
-<div class="form-group">
+    <div class="button">
 
-    <form action="">
-        Please enter a city:  <input type="text"  placeholder="City" name="location" />
-        <br><br>
-        <button type="submit" name="cityButton" class="btn btn-primary">Submit</button>
-    </form>
+        <button class="btn-primary" id="runThis"></button>
+
+    </div>
 
 </div>
+
+<script>
+
+        $("#runThis").click(function() {
+        var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+        $.getJSON( flickerAPI, {
+            tags:"grand canyon",
+            tagmode: "any",
+            format: "json"
+        })
+                .done(function( data ) {
+                    $.each( data.items, function( i, item ) {
+                        $( "<img>" ).attr( "src", item.media.m ).appendTo( "#images" );
+                        if ( i === 10 ) {
+                            return false;
+                        }
+                    });
+                });
+    })();
+</script>
+
+
+
+</body>
 
 </html>
