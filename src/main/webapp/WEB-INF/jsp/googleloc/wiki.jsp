@@ -1,11 +1,14 @@
 <%@include file="../includes/header.jsp"%>
 <%@include file="../includes/navbar.jsp"%>
 
+<c:url value="/static/js/wiki.js" var="wiki"/>
+<script src="${wiki}"></script>
+
 <link href="${bootstrapCUSTOM}" rel="stylesheet" media="screen">
 
-<h1> Wiki dikidi doo  </h1>
+<h1> Dicks Out </h1>
 
-<body>
+<body class="harambe">
 
 <div id="wikiSearch" class="jumbotron" align="center">
 
@@ -22,23 +25,11 @@
 
     </div>
 
-
-
 </div>
 
 
 <script>
-    $("#wordButton").click(function(){
-        var keyWord = $("[name='keyWord']").val();
-        var html ='';
-        var wikiApi = "https://en.wikipedia.org/w/api.php?action=opensearch&search=" + keyWord + "&limit=5&format=json&callback=?";
-        $.getJSON(wikiApi,function(data){
-            console.log(data);
-            for(var i = 0; i < data[1].length; ++i){
-                html += '<a href = " ' + data[3][i] + '" target = "_blank" class= "row"><h3>' + data[1][i] + '</h3><p>' + data[2][i] + '</p></a>';
-                    }
-            $('#results').html(html)
-                });
 
-    });
+        wikiResult();
+
 </script>
