@@ -15,3 +15,22 @@
     color: #ffffff;
     font-weight: bolder;
 }
+.row{
+    font-color: Black;
+    background-color: white;
+    border: 1px solid transparent;
+    display: block;
+    margin: 0 auto;
+    padding: 0 10px;
+    text-align: center;
+}
+.results{
+
+    font-color: Black;
+    background-color: white;
+    border: 1px solid transparent;
+    display: block;
+    margin: 0 auto;
+    padding: 0 10px;
+    text-align: center;
+}

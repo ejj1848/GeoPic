@@ -15,6 +15,7 @@
                 <%--PAGE LINKS--%>
                 <li><a href="/city"> City </a> </li>
                 <li><a href="/pictures"> Pictures </a> </li>
+                <li><a href="/wiki"> Wiki</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <%--login link--%>
