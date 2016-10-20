@@ -15,22 +15,42 @@
     color: #ffffff;
     font-weight: bolder;
 }
-.row{
-    font-color: Black;
-    background-color: white;
-    border: 1px solid transparent;
-    display: block;
-    margin: 0 auto;
-    padding: 0 10px;
-    text-align: center;
-}
-.results{
 
-    font-color: Black;
-    background-color: white;
-    border: 1px solid transparent;
+p {
+    color: Silver;
+    background-color: #48576a;
+    font-size: .75rem;
+}
+
+h3{background-color: #48576a;
+    color:Silver;
+    font-weight: bold;
+}
+.middlebox{
+    color:#48576a;
+    font-color: Silver;
+    margin: 1%
+}
+
+.row:hover {
+    border: 5px solid #48576a;
+    opacity: 1.0;
+}
+
+.row{
+
+    background: #48576a;
+    border: 2px solid transparent;
+    border-bottom: 2px solid Silver;
+    border-top: 2px solid Silver;
+    color: Silver;
     display: block;
+    height: auto;
     margin: 0 auto;
-    padding: 0 10px;
+    opacity: 0.9;
+    overflow: hidden;
+    padding: 0 20px;
     text-align: center;
+    text-decoration: none;
+    width: 80%;
 }
