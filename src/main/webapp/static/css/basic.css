@@ -24,10 +24,17 @@ p {
     background-color: #48576a;
     font-size: .75rem;
 }
+h1{
+    color: black;
+    font-weight: Bold;
+}
 
 h3{background-color: #48576a;
     color:Silver;
     font-weight: bold;
+}
+.navbar-inverse{
+    background-color:#676060
 }
 .middlebox{
     color:#48576a;
@@ -54,6 +61,5 @@ h3{background-color: #48576a;
     overflow: hidden;
     padding: 0 20px;
     text-align: center;
-    text-decoration: none;
-    width: 80%;
+    width: 90%;
 }

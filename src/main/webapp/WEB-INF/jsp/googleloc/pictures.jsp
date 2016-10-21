@@ -23,7 +23,9 @@
 </div>
 
 <script>
+
  getPictures();
+
 </script>
 
 
