@@ -13,13 +13,14 @@
     <div class="form-group">
 
         <form name = "getPhoto">
-            What do you want to see ? <input type="text" id="photoRetrieve"  placeholder="What do you want to see" name="photo"/>
-            <%--How Many Pictures do you want to see? <input type="number" id="howMany" placeholder="How Many Pics?" name="count"/>--%>
-            <button type="button" id="locationButton"  class="btn btn-primary"> Show me </button>
-        </form>
+            What do you want to see ? <input id="photoRetrieve"  placeholder="What do you want to see" name="photo"/>
 
+
+        </form>
+        <button id="locationButton"  class="btn btn-primary"> Show me </button>
     </div>
 
+</div>
 </div>
 
 <script>

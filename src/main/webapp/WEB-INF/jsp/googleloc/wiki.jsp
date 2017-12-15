@@ -15,7 +15,7 @@
     <div class="middlebox">
 
         <form name = "getWord">
-            Tell me what you want to read about? <input type="text" id="wordRetrieve"  placeholder="Keyword" name="keyWord"/>
+            Tell me what you want to read about? <input id="wordRetrieve"  placeholder="Keyword" name="keyWord"/>
 
             <button type="button" id="wordButton"  class="btn btn-primary"> WikiLeaks </button>
 
